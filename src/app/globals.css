@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: oklch(0.65 0.25 270);
+  --color-primary-foreground: oklch(0.98 0 0);
+  --color-accent: oklch(0.7 0.15 175);
+  --color-accent-foreground: oklch(0.98 0 0);
+  
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 4s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-gradient: gradient 8s ease infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ============ Root Variables ============ */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 220 15% 10%;
+  --card: 0 0% 98%;
+  --card-foreground: 220 15% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 15% 10%;
+  --primary: 250 100% 65%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 10% 94%;
+  --secondary-foreground: 220 15% 20%;
+  --muted: 220 10% 94%;
+  --muted-foreground: 220 10% 40%;
+  --accent: 170 80% 40%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 10% 90%;
+  --input: 220 10% 90%;
+  --ring: 250 100% 65%;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 220 20% 4%;
+  --foreground: 0 0% 95%;
+  --card: 220 15% 8%;
+  --card-foreground: 0 0% 95%;
+  --popover: 220 15% 8%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 250 100% 65%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 10% 14%;
+  --secondary-foreground: 0 0% 90%;
+  --muted: 220 10% 15%;
+  --muted-foreground: 220 10% 55%;
+  --accent: 170 80% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 10% 15%;
+  --input: 220 10% 15%;
+  --ring: 250 100% 65%;
+}
+
+/* ============ Base Styles ============ */
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============ Custom Scrollbar ============ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* ============ Glassmorphism Utilities ============ */
+.glass {
+  background: hsl(var(--card) / 0.6);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid hsl(var(--border) / 0.3);
+}
+
+.glass-strong {
+  background: hsl(var(--card) / 0.8);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid hsl(var(--border) / 0.4);
+}
+
+/* ============ Gradient Text ============ */
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary)) 0%,
+    hsl(var(--accent)) 50%,
+    hsl(var(--primary)) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============ Gradient Border ============ */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary) / 0.5),
+    hsl(var(--accent) / 0.5),
+    hsl(var(--primary) / 0.5)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ============ Grid Pattern ============ */
+.grid-pattern {
+  background-image: linear-gradient(
+    hsl(var(--muted-foreground) / 0.03) 1px,
+    transparent 1px
+  ),
+  linear-gradient(
+    90deg,
+    hsl(var(--muted-foreground) / 0.03) 1px,
+    transparent 1px
+  );
+  background-size: 60px 60px;
+}
+
+/* ============ Selection ============ */
+::selection {
+  background: hsl(var(--primary) / 0.3);
+  color: hsl(var(--foreground));
+}

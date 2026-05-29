@@ -1,0 +1,167 @@
+export const portfolio = {
+  personal: {
+    name: "Rajarikam Ashish",
+    title: "Full Stack Developer & AI Enthusiast",
+    subtitle: "Building intelligent web applications with modern technologies",
+    location: "Hyderabad, India",
+    email: "rajarikam117@gmail.com",
+    phone: "+91 9989813126",
+    github: "https://github.com/Rajarikam117",
+    linkedin: "https://www.linkedin.com/in/rajarikam-ashish-61821b2b0/",
+    bio: "Full Stack Web Developer and B.Tech CSE (AI & ML) student with hands-on experience building React.js, Node.js, and Java Spring Boot applications integrated with LLM APIs. Proven track record of shipping production-ready web applications end to end, from UI design to Vercel deployment. Proficient in REST API development, SQL/NoSQL databases, and agile team collaboration.",
+    education: "B.Tech CSE (AI & ML)",
+    resumeUrl: "/resume.pdf",
+    avatarUrl: "/images/profile.jpg",
+    roles: ["Full Stack Developer", "AI Enthusiast", "Problem Solver", "Open Source Contributor"],
+    social: {
+      github: "https://github.com/Rajarikam117",
+      linkedin: "https://www.linkedin.com/in/rajarikam-ashish-61821b2b0/",
+    },
+  },
+  skills: [
+    {
+      category: "Languages",
+      icon: "Code2",
+      items: ["JavaScript (ES6+)", "Java", "Python", "HTML5", "CSS3", "SQL"],
+    },
+    {
+      category: "Frontend",
+      icon: "Layout",
+      items: ["React.js", "Next.js", "Tailwind CSS", "Responsive Design", "Progressive Web Apps"],
+    },
+    {
+      category: "Backend & APIs",
+      icon: "Server",
+      items: ["Node.js", "Java Spring Boot", "REST APIs", "JDBC", "Express.js"],
+    },
+    {
+      category: "Databases",
+      icon: "Database",
+      items: ["MySQL", "PostgreSQL", "MongoDB", "NoSQL"],
+    },
+    {
+      category: "AI & LLM Integration",
+      icon: "Brain",
+      items: ["Anthropic Claude API", "Groq LLaMA", "Tavily Search API"],
+    },
+    {
+      category: "Tools & Deployment",
+      icon: "Wrench",
+      items: ["Git", "GitHub", "Vercel", "Chrome Extensions", "Agile/Scrum"],
+    },
+  ],
+  projects: [
+    {
+      title: "FinSathi",
+      subtitle: "AI-Powered Personal Finance Platform",
+      description: "An AI-powered personal finance web application targeting Indian users, supporting EPF, PPF, NPS, and SIP instruments. Features LLM-driven financial advisory with personalized investment recommendations.",
+      techStack: ["React.js", "Node.js", "Groq LLaMA API", "Tailwind CSS", "Vercel"],
+      year: "2026",
+      featured: true,
+      github: "https://github.com/Rajarikam117/finSathi",
+      live: "https://finsathi-eight.vercel.app/",
+      highlights: [
+        "Led project from ideation to production deployment on Vercel",
+        "Presented at VNR DESIGN-A-THON 2026",
+        "Integrated LLM-driven financial advisory features",
+        "Implemented RESTful API layer and responsive frontend",
+      ],
+    },
+    {
+      title: "TruthLens",
+      subtitle: "AI Fake News Detector + Chrome Extension",
+      description: "A real-time AI fact-checking web application that cross-references news articles against live search results. Packaged as a Chrome Extension for in-browser fact verification.",
+      techStack: ["React.js", "Groq LLaMA API", "Tavily Search API", "Chrome Extension API"],
+      year: "2025–2026",
+      featured: false,
+      github: "https://github.com/Rajarikam117/truthlens",
+      live: "https://truthlens-xi.vercel.app/",
+      highlights: [
+        "Real-time AI fact-checking against live search results",
+        "Chrome Extension for in-browser fact verification",
+        "Integrated Tavily live search API",
+      ],
+    },
+    {
+      title: "CHRONO",
+      subtitle: "AI Schedule Optimizer (PWA)",
+      description: 
+      "A Progressive Web App that uses AI to intelligently plan and optimize daily schedules. Features offlinesupport and installable PWA capabilities.",
+      techStack: ["React.js", "Claude API", "Tailwind CSS", "PWA", "Vercel"],
+      year: "2025",
+      featured: false,
+      github: "https://github.com/Rajarikam117/AI-Schudler",
+      live: "https://ai-schudler.vercel.app/",
+      highlights: [
+        "AI-powered schedule optimization",
+        "Offline support and installable PWA",
+        "Mobile and desktop compatible",
+      ],
+    },
+    {
+      title: "SmartLA",
+      subtitle: "Smart Lexical Analyzer with Intelligent Error Handling",
+      description: "A single-file web application performing lexical analysis for C, Java, and Python source code with intelligent error classification and plain-English fix suggestions.",
+      techStack: ["HTML5", "CSS3", "JavaScript", "Groq API", "Compiler Design"],
+      year: "2020–2026",
+      featured: false,
+      github: "https://github.com/Rajarikam117/lex",
+      live: "https://lex-mocha.vercel.app/",
+      highlights: [
+        "Lexical analysis for C, Java, and Python",
+        "Intelligent error classification with Groq API",
+        "Complete technical documentation delivered",
+      ],
+    },
+  ],
+  experience: [
+    {
+      type: "education" as const,
+      title: "B.Tech — Computer Science and Engineering (AI & ML)",
+      organization: "Vignan Institute of Technology and Science",
+      location: "Hyderabad, India",
+      period: "Expected 2028",
+      description: "Relevant Coursework: Data Structures & Algorithms, Database Management Systems, Theory of Computation, Compiler Design, Object Oriented Programming (Java), Web Technologies",
+      current: true,
+    },
+  ],
+  achievements: [
+    {
+      title: "VNR DESIGN-A-THON 2026",
+      description: "Presented FinSathi — AI finance platform built and deployed within the competition timeline",
+      icon: "Trophy",
+    },
+    {
+      title: "Consistent GitHub Contributor",
+      description: "Maintained consistent GitHub contribution streak by documenting Java OOP learnings and project work publicly",
+      icon: "GitBranch",
+    },
+    {
+      title: "4 Full Stack Apps in One Year",
+      description: "Built and deployed 4 full stack web applications using React.js, Node.js, and LLM APIs within one academic year",
+      icon: "Rocket",
+    },
+    {
+      title: "Java Full-Stack Curriculum",
+      description: "Completed Java full-stack curriculum covering OOP, Collections, JDBC, File I/O, and thread synchronization",
+      icon: "BookOpen",
+    },
+  ],
+  stats: [
+    { label: "Projects Shipped", value: 4, suffix: "+" },
+    { label: "Technologies", value: 15, suffix: "+" },
+    { label: "APIs Integrated", value: 5, suffix: "+" },
+    { label: "Hackathons", value: 1, suffix: "" },
+  ],
+  navItems: [
+    { label: "Home", href: "#hero" },
+    { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
+    { label: "Experience", href: "#experience" },
+    { label: "Projects", href: "#projects" },
+    { label: "Achievements", href: "#achievements" },
+    { label: "Contact", href: "#contact" },
+  ],
+};
+
+export type Portfolio = typeof portfolio;
