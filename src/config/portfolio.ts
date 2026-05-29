@@ -10,7 +10,7 @@ export const portfolio = {
     linkedin: "https://www.linkedin.com/in/rajarikam-ashish-61821b2b0/",
     bio: "Full Stack Web Developer and B.Tech CSE (AI & ML) student with hands-on experience building React.js, Node.js, and Java Spring Boot applications integrated with LLM APIs. Proven track record of shipping production-ready web applications end to end, from UI design to Vercel deployment. Proficient in REST API development, SQL/NoSQL databases, and agile team collaboration.",
     education: "B.Tech CSE (AI & ML)",
-    resumeUrl: "/resume.pdf",
+    resumeUrl: "/Resume.pdf",
     avatarUrl: "/images/profile.jpg",
     roles: ["Full Stack Developer", "AI Enthusiast", "Problem Solver", "Open Source Contributor"],
     social: {
